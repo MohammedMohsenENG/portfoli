@@ -1,0 +1,130 @@
+#project {
+  .container {
+    row-gap: 3rem;
+  }
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+  min-width: 30rem;
+  max-width: 80vw;
+  height: 40rem;
+  padding: 2rem;
+  background-color: var(--cover);
+
+  .small-heading {
+    width: fit-content;
+    position: absolute;
+    top: 1rem;
+    left: -2rem;
+    transform: rotateZ(-35deg);
+    color: white;
+    text-shadow: 1px 1px saddlebrown;
+    background-color: var(--primary);
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .image {
+    width: 100%;
+    height: 85%;
+    border-radius: 0;
+  }
+  .button {
+    border-radius: 1rem;
+    background-color: var(--primary);
+  }
+}
+.popo {
+  width: 70%;
+  max-width: 600px;
+  max-height: 90vh;
+  background-color: var(--cover);
+  color: white;
+  border-radius: 2rem;
+  padding-block: 2rem;
+  z-index: 1008;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 2.5rem;
+
+  * {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .small-heading {
+    grid-column: 1/-1;
+    color: var(--primary);
+  }
+
+  .image {
+    border-radius: 0;
+    grid-column: 1/-1;
+    grid-row: span 3;
+  }
+
+  .details,
+  .tecnics {
+    background-color: var(--cover-sec);
+    color: var(--text-color-dark);
+    font-size: var(--text-nl);
+    font-weight: 700;
+    text-align: justify;
+    padding: 1rem;
+  }
+
+  .details {
+    grid-row: span 2;
+    grid-column: 1/-1;
+    overflow-y: scroll;
+    line-height: 2.4rem;
+  }
+
+  .tecnics {
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+  .button {
+    grid-row: span 1;
+    grid-column: span 2;
+    margin-inline: auto;
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.279);
+  backdrop-filter: blur(5px);
+  z-index: 1010;
+
+  .pop-btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+
+    .span-1 {
+      transform: rotateZ(45deg);
+      position: absolute;
+    }
+
+    .span-2 {
+      transform: rotateZ(-45deg);
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.card {
+  width: 20rem;
+  background-color: rgb(241, 253, 235);
+  height: fit-content;
+  font-size: large;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+/* =================== animated-card-b ================== */
+
+.animated-card-a {
+  /* margin: 5rem auto; */
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+  width: fit-content;
+  background-image: linear-gradient(
+    to top left,
+    var(--secondary),
+    rgb(0, 255, 13)
+  );
+  height: fit-content;
+  font-size: large;
+  padding: 2rem;
+  border-radius: 2rem;
+
+  div {
+    position: relative;
+    z-index: 30;
+  }
+}
+
+.animated-card-a::before {
+  content: "";
+  /* background-image: linear-gradient(to left, var(--primary), var(--secondary)); */
+  width: 120%;
+  height: 30%;
+  z-index: -1;
+  position: absolute;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%,-50%); */
+  animation: animated-card-a 2s infinite linear;
+}
+
+.animated-card-a::after {
+  content: "";
+  width: 99%;
+  height: 98%;
+  z-index: 10;
+  background-color: aliceblue;
+  position: absolute;
+  top: 1%;
+  left: 0.5%;
+  border-radius: 2rem;
+}
+
+@keyframes animated-card-a {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* =================== animated-card-b ================== */
+.animated-card-b {
+  margin-top: 2rem;
+  position: relative;
+  min-height: 20rem;
+  height: fit-content;
+  width: fit-content;
+  transition: all 2s;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 2s;
+  perspective: 3000px;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.animated-card-b:hover .front {
+  transform: rotateY(180deg);
+}
+
+.animated-card-b:hover .back {
+  transform: rotateY(0deg);
+}

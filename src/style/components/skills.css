@@ -1,0 +1,101 @@
+#skills {
+  background-color: var(--cover);
+  padding-block: 1rem;
+
+  .container{
+    gap:2rem
+  }
+}
+.skill {
+  width: 25rem;
+  margin-block: 2rem;
+  text-align: center;
+  color: var(--secondary);
+  
+
+  h3 {
+    background-image: linear-gradient(
+      to top left,
+      var(--text-color-light),
+      var(--secondary)
+    );
+    background-clip: text;
+    color: transparent;
+  }
+
+  p {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    margin-block: 2rem;
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+.skill::after {
+  background-color: rgb(0, 38, 88);
+  width: 98%;
+  left: 1%;
+}
+.skill::before {
+  background-image: linear-gradient(to left, orangered, red);
+  top: 30%;
+  left: -50%;
+  width: 200%;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  width: 50%;
+  height: 50%;
+  margin-inline: auto;
+  margin-block:1rem;
+  border-radius: 40%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.progress {
+  div {
+    width: 80%;
+    height: 5px;
+    background-color: var(--text-color-dark);
+    border-radius: 1rem;
+    margin-block: 1.5rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  span {
+    background-color: orangered;
+    height: 100%;
+    align-self: flex-start;
+    position: relative;
+  }
+  span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to left, orangered, white, orangered);
+
+    width: 7px;
+    height: 100%;
+    animation: move 2s infinite;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: -2px;
+  }
+  100% {
+    left: 99%;
+    opacity: 0;
+  }
+}

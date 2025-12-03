@@ -1,0 +1,41 @@
+
+@media (max-width: 570px) {
+  .hole {
+    min-width: 100%;
+    border-radius: 0;
+  }
+
+  #footer{
+    left:0
+  }
+  .main-btn {
+    font-size: var(--text-sm);
+  }
+
+  .heading-secondary {
+    font-size: 3rem !important;
+  }
+
+  section {
+    box-shadow: 1px 20px 30px 0px rgba(0, 0, 0, 0.58);
+  }
+
+
+  .work .form-body {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+
+    .form-control {
+      grid-column: span 4 !important;
+    }
+
+    .form-control:nth-of-type(6),
+    .form-control:nth-of-type(7),
+    .form-control:nth-of-type(8),
+    .form-control:nth-of-type(9) {
+      grid-column: span 2 !important;
+      height: 100%;
+    }
+  }
+
+}

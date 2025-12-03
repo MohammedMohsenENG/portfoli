@@ -1,0 +1,215 @@
+#contact {
+  height: fit-content;
+  background-image: linear-gradient(
+      to left bottom,
+      blue,
+      rgba(75, 255, 240, 0.74)
+    ),
+    url(./../../../assestent/contact.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+
+  .container {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.contact-card {
+  position: relative;
+  color: var(--text-color-light);
+  top: 0;
+  left: 0;
+}
+
+.left,
+.right {
+  max-width: 45%;
+
+  display: flex;
+}
+
+.left {
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    font-size: var(--text-md);
+    /* margin: 2rem auto; */
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  p {
+    font-size: var(--text-nl);
+  }
+
+  .massage {
+    padding: 2rem;
+    color: var(--text-color-light);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+.massage {
+  max-width: 450px;
+  width: fit-content;
+  /* height: 300px; */
+  -moz-min-height: fit-content;
+  min-height: fit-content;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  border: 1rem solid var(--text-color-light);
+  box-shadow: var(--shadow-sm);
+
+  .small-heading {
+    margin-block: 2rem;
+    color: var(--text-color-light);
+    border-bottom: 2px solid var(--text-color-light);
+    font-size: 2.8vw;
+  }
+
+  .actions {
+    display: block;
+    margin: 3rem auto;
+    width: fit-content;
+
+    .main-btn {
+      padding: 1rem;
+      border: none;
+      border-radius: 3px;
+      background-color: var(--text-color-light);
+      color: var(--primary);
+    }
+  }
+}
+
+.massage:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(255, 255, 255, 0.274);
+}
+
+form {
+  min-height: 70%;
+  width: 100%;
+}
+
+.form-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+  z-index: 100;
+
+  label {
+    padding-inline-start: 1rem;
+    font-size: var(--text-sm);
+    color: var(--text-color-light);
+  }
+}
+
+.input {
+  height: 100%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  min-width: 25rem;
+  border-radius: 1rem;
+  font-size: var(--text-sm);
+  border: none;
+  background-color: var(--text-color-light);
+  position: relative;
+}
+
+.input:hover {
+  transform: translateX(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.work {
+  max-width: 80%;
+  width: fit-content;
+  background-image: url(./../../../assestent/work.jpg);
+  position: relative;
+
+  div {
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .form-body {
+    display: grid;
+    grid-template-columns: repeat(5, 18%);
+    grid-template-rows: repeat(5, 1fr);
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 1rem;
+  }
+  .form-control:nth-of-type(1),
+  .form-control:nth-of-type(2) {
+    grid-column: span 2;
+  }
+
+  .form-control:nth-of-type(5) {
+    grid-column: span 3;
+  }
+
+  .form-control:nth-of-type(10) {
+    grid-column: span 2;
+    grid-row: span 3;
+    height: 100%;
+  }
+
+  .form-control:nth-of-type(11) {
+    grid-column: span 3;
+    grid-row: span 2;
+    height: 100%;
+  }
+
+  .input {
+    min-width: 0;
+  }
+}
+
+.input::file-selector-button {
+  background-color: var(--text-color-light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.work::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--primary), var(--secondary));
+  z-index: 20;
+  clip-path: polygon(0 0, 50% 0, 70% 100%, 0 100%);
+  border-radius: 1rem;
+}

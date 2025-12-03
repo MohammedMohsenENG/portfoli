@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: var(--transition);
+
+  :focus {
+    outline: none;
+  }
+
+  a {
+    color: white;
+  }
+}
+::-webkit-scrollbar{
+  background-color: blue;
+}
+
+.hide {
+  display: none !important;
+}
+
+body {
+  font-family: ubuntu;
+  transition: all 1s;
+  overflow-x: hidden;
+  background-color: var(--cover-sec);
+
+}
+
+.hole {
+  max-width: 80%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+position:relative;
+}
+
+section {
+  padding-block: 2rem;
+}
+
+.heading-secondary {
+  margin: auto;
+  width: fit-content;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  font-size: var(--text-lg);
+  text-shadow: var(--shadow-sm);
+  z-index: 30;
+
+  background-image: linear-gradient(to left,
+      var(--primary),
+      var(--secondary),
+      var(--primary));
+  background-clip: text;
+  color: transparent;
+}
+
+.heading-secondary:hover {
+  transform: translateY(-3px) skewX(3deg) scaleX(1.01) rotateZ(2deg);
+}
+
+.small-heading {
+  margin-inline: auto;
+  width: fit-content;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: var(--text-md);
+  z-index: 30;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  span {
+    width: 1rem;
+    height: 3rem;
+    background-color: var(--primary);
+    border-radius: 2px;
+  }
+
+  .loading-after {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 20rem;
+    height: 10rem;
+  }
+
+  span:nth-of-type(1) {
+    animation: moving 1s infinite;
+    animation-delay: 0.1s;
+  }
+
+  span:nth-of-type(2) {
+    animation: moving 1s infinite;
+    animation-delay: 0.2s;
+  }
+
+  span:nth-of-type(3) {
+    animation: moving 1s infinite;
+    animation-delay: 0.3s;
+  }
+
+  span:nth-of-type(4) {
+    animation: moving 1s infinite;
+    animation-delay: 0.4s;
+  }
+
+  span:nth-of-type(5) {
+    animation: moving 1s infinite;
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes moving {
+  0% {
+    height: 0px;
+  }
+
+  50% {
+    height: 40px;
+  }
+
+  100% {
+    height: 0px;
+  }
+}

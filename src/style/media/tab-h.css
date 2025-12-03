@@ -1,0 +1,109 @@
+@media (max-width: 1080px) {
+  .logo {
+    transform: scale(0.5);
+  }
+
+}
+
+@media (max-width: 820px) {
+  #btn {
+    display: flex !important;
+  }
+
+  .nav_bar {
+    flex-direction: row-reverse;
+    position: fixed;
+    background-image: none;
+    backdrop-filter: blur(20px);
+    z-index:1007;
+
+    .logo{
+      background-image: linear-gradient(to top,rgb(66, 225, 249),rgb(1, 213, 107));
+      transform:scale(.75)
+    }
+  }
+
+  #Hero{
+    margin-top: 10rem;
+  }
+  #contact {
+    .container {
+      flex-direction: column !important;
+      align-items: center;
+
+      .left,
+      .right {
+        min-width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  .mainMenu {
+    display: none !important;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+
+    .actions {
+      margin-top: 3rem;
+    }
+  }
+
+  #Hero .contacting {
+    display: none !important;
+  }
+
+  .work .form-body {
+    grid-template-rows: repeat(6, 1fr) !important;
+
+    .form-control:nth-of-type(1) {
+      grid-column: span 2;
+    }
+
+    .form-control:nth-of-type(2) {
+      grid-column: span 3;
+    }
+
+    .form-control:nth-of-type(3) {
+      grid-column: span 3;
+    }
+
+    .form-control:nth-of-type(4) {
+      grid-column: span 2;
+    }
+
+    .form-control:nth-of-type(5) {
+      grid-column: span 5;
+    }
+
+    .form-control:nth-of-type(6) {
+      grid-column: span 2;
+    }
+
+    .form-control:nth-of-type(10) {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 100%;
+    }
+
+    .form-control:nth-of-type(11) {
+      grid-column: span 3;
+      grid-row: span 2;
+      height: 100%;
+    }
+  }
+
+  #contact {
+    .left,
+    .right {margin-bottom: 50rem;
+    }
+  }
+
+  .project{
+    margin-bottom: 30rem;
+  }
+  
+}
+

@@ -1,0 +1,21 @@
+@media (max-width:720px){
+  #footer {
+
+    .logo{
+      margin-bottom: 4rem;
+    }
+    .container{
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .content{
+        width:fit-content;
+        margin-block: 2rem;
+      }
+      .content:nth-of-type(1){
+        order:1;
+      }
+    }
+  }
+}
